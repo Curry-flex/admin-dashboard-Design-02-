@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Sora, "sans serif";
+  outline: none;
+}
+
+body {
+  background: #f4f4fb;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-left: 6rem;
+  padding-top: 20px;
+}
+
+.profile {
+  display: flex;
+  width: 32%;
+  max-width: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-image {
+  width: 50px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.side-toggle {
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 24px;
+  float: right;
+  font-size: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  top: 0;
+  left: 0;
+  padding: 80px 0 20px 0;
+  color: #fff;
+  background-color: #2d2b98;
+}
+
+.side-menu {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.side-menu > span {
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+.side-menu p {
+  padding-top: 12px;
+}
+
+.side-menu:hover {
+  background-color: #f8f8fb;
+  color: blue;
+}
+
+#toggle:checked ~ .sidebar {
+  width: 70px;
+}
+
+#toggle:checked ~ main {
+  padding: 6rem 2rem 2rem 6rem;
+}
+
+#toggle:checked ~ .sidebar .side-menu p {
+  display: none;
+}
+
+main {
+  min-height: 100%;
+  padding: 6rem 1rem 2rem 14rem;
+  color: #201f2b;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas:
+    "total-1 total-2 total-3 total-4 total-4"
+    "details details details customer customer"
+    "details details details customer customer";
+}
+
+.card1 {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.total-1 {
+  grid-area: total-1;
+  background-color: #2d972e;
+  color: #fff;
+}
+
+.total-2 {
+  grid-area: total-2;
+  background: orange;
+  color: #fff;
+}
+
+.total-3 {
+  grid-area: total-3;
+  background: purple;
+  color: #fff;
+}
+
+.total-4 {
+  grid-area: total-4;
+  background-color: royalblue;
+  color: #fff;
+}
+
+.detail {
+  grid-area: details;
+  overflow-x: auto;
+}
+
+.customer {
+  grid-area: customer;
+  overflow-x: auto;
+}
+
+.info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-details h2 {
+  font-size: 24px;
+}
+
+.info-details p {
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+.customer-header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.customer-header button {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-info {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.4fr;
+  grid-auto-flow: column;
+  margin: 10px 0;
+  min-width: 230px;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.customer-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.customer-info p {
+  font-size: 0.9rem;
+}
+.customer-date {
+  font-size: 0.9rem;
+  text-align: right;
+  color: #9092a9;
+}
+
+/*Make responsive */
+
+@media screen and (max-width: 980px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "total-1 total-2"
+      "total-3 total-4"
+      "details details"
+      "customer customer";
+  }
+  .card1 {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .profile-name {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  main {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  #toggle:checked ~ .sidebar {
+    width: 200px;
+    display: block;
+  }
+  #toggle:checked ~ .sidebar .side-menu > p {
+    display: block;
+  }
+
+  #toggle:checked ~ main {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "total-1"
+      "total-2"
+      "total-3"
+      "total-4"
+      "details"
+      "customer";
+  }
+}

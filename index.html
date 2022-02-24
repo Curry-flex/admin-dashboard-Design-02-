@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="JQuery/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="file:///E:/Web-Design-Project/Project1/fontawesome/css/all.css"
+    />
+
+    <link rel="stylesheet" href="font/all.min.css" />
+    <link rel="stylesheet" href="font/fontawesome.min.css" />
+    <link rel="stylesheet" href="Style/style.css " />
+  </head>
+  <body>
+    <!---Nav-bar-->
+    <nav class="nav-bar">
+      <h4>Dashboard</h4>
+
+      <div class="profile">
+        <span><i class="fas fa-search"></i></span>
+        <img src="images/team1.jpeg" class="profile-image" alt="" />
+        <p class="profile-name">Curry flex</p>
+      </div>
+    </nav>
+    <!--End nav-bar-->
+
+    <!--side bar-->
+    <input type="checkbox" id="toggle" />
+    <label for="toggle" class="side-toggle">
+      <span class="fas fa-bars"></span>
+    </label>
+    <div class="sidebar">
+      <div class="side-menu">
+        <span class="fas fa-clipboard-list"></span>
+        <p>Overview</p>
+      </div>
+
+      <div class="side-menu">
+        <span class="fas fa-users"> </span>
+        <p>Teams</p>
+      </div>
+
+      <div class="side-menu">
+        <span class="fas fa-credit-card"></span>
+        <p>Payments</p>
+      </div>
+
+      <div class="side-menu">
+        <span class="fas fa-chart-line"></span>
+        <p>Statistics</p>
+      </div>
+
+      <div class="side-menu">
+        <span class="fas fa-id-card"></span>
+        <p>Contacts</p>
+      </div>
+
+      <div class="side-menu">
+        <span class="fas fa-cog"></span>
+        <p>Setting</p>
+      </div>
+    </div>
+
+    <!---Main content-->
+
+    <main>
+      <div class="dashboard-container">
+        <!--4 card top-->
+        <div class="card1 total-1">
+          <div class="info">
+            <div class="info-details">
+              <h3>Revenue</h3>
+              <p>All collected</p>
+              <h2>12495966 <span>Tsh</span></h2>
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1 total-2">
+          <div class="info">
+            <div class="info-details">
+              <h3>Total Orders</h3>
+              <p>All collected</p>
+              <h2>12495966 <span>Tsh</span></h2>
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-boxes"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card1 total-3">
+          <div class="info">
+            <div class="info-details">
+              <h3>Customers</h3>
+              <p>All collected</p>
+              <h2>12495966 <span>Tsh</span></h2>
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-user-friends"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card1 total-4">
+          <div class="info">
+            <div class="info-details">
+              <h3>Dail Orders</h3>
+              <p>All collected</p>
+              <h2>12495966 <span>Tsh</span></h2>
+            </div>
+
+            <div class="icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-----2 card bottom-->
+        <div class="card1 detail">
+          <div class="customer-header">
+            <h3>Recent Orders</h3>
+            <button class="btn btn-primary">See More</button>
+          </div>
+
+          <div>
+            <table class="table table-responsive table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Television</th>
+                  <td>6000000</td>
+                  <td>paid</td>
+                  <td><button class="btn btn-primary">Delivery</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">Television</th>
+                  <td>6000000</td>
+                  <td>paid</td>
+                  <td><button class="btn btn-danger">Return</button></td>
+                </tr>
+                <tr>
+                  <th scope="row">Television</th>
+                  <td>6000000</td>
+                  <td>paid</td>
+                  <td><button class="btn btn-success">Delivery</button></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Television</th>
+                  <td>6000000</td>
+                  <td>paid</td>
+                  <td><button class="btn btn-info">Delivery</button></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Television</th>
+                  <td>6000000</td>
+                  <td>paid</td>
+                  <td><button class="btn btn-warning">Delivery</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!----Customer-->
+        <div class="card1 customer">
+          <h3>Sales Activities</h3>
+          <div class="customer-info">
+            <img src="images/team2.jpeg" class="customer-image" alt="" />
+            <div class="customer-name">
+              <h5>Husna Yahaya</h5>
+              <p>Ndushu from mlandege</p>
+            </div>
+            <p class="customer-date">Today</p>
+          </div>
+
+          <div class="customer-info">
+            <img src="images/team3.jpeg" class="customer-image" alt="" />
+            <div class="customer-name">
+              <h5>Ayesha Ally</h5>
+              <p>Ndushu from mlandege</p>
+            </div>
+            <p class="customer-date">Today</p>
+          </div>
+
+          <div class="customer-info">
+            <img src="images/team4.jpg" class="customer-image" alt="" />
+            <div class="customer-name">
+              <h5>Shaban Yahaya</h5>
+              <p>Ndushu from mlandege</p>
+            </div>
+            <p class="customer-date">Today</p>
+          </div>
+
+          <div class="customer-info">
+            <img src="images/staff.jpg" class="customer-image" alt="" />
+            <div class="customer-name">
+              <h5>Rose Rimo</h5>
+              <p>Ndushu from mlandege</p>
+            </div>
+            <p class="customer-date">Today</p>
+          </div>
+
+          <div class="customer-info">
+            <img src="images/beka.jpeg" class="customer-image" alt="" />
+            <div class="customer-name">
+              <h5>Becka golani</h5>
+              <p>Ndushu from mlandege</p>
+            </div>
+            <p class="customer-date">Today</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
